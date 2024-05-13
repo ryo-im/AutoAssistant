@@ -767,7 +767,7 @@ header.header div.header__bar.row div.grid-6 {
 }
 
 header.header div.header__bar.row div.grid-6 a.post {
-  width: 120px;
+  width: 180px;
   display: inline-left;
   margin-left: 10px;
 }
@@ -1056,4 +1056,62 @@ footer p {
 
 .search-form .search-btn {
   width: 10%;
+}
+
+.main_title{
+  width: 300px;
+  margin: 30px auto 15px;
+  font-size: 20px;
+}
+
+.distance{
+  width:230px;
+  margin:0 auto;
+}
+
+.item {
+  width: 800px;
+  margin:0 auto;
+  padding: 10px;
+}
+
+.item_wrapper {
+  border: 1px solid #000;
+  margin: 25px 0;
+  padding: 10px;
+}
+
+.item_name {
+}
+
+.item_setting{
+  width: 300px;
+  margin:35px auto 0;
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid #000;
+  background-color:#d8d8d8;
+  text-align: center;
+}
+
+.cost{
+  margin:150px 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.total_cost{
+  font-size: 25px;
+  margin:0 0 30px 0;
+}
+
+.cost_detail{
+  width: 150px;
+  font-size: 15px;
+  padding: 10px 35px;
+  border: 1px solid #000;
+  background-color: #d8d8d8;
 }
