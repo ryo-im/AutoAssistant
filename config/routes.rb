@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'maintenances#index'
+  devise_for :users
+  root to: 'cars#index'
+  resources :cars
   resources :maintenances, only: :index
 end

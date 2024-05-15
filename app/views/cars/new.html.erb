@@ -1,0 +1,13 @@
+<div class="contents row">
+  <div class="container">
+    <h3>車両を登録する</h3>
+    <%= form_with(model: @car, local: true) do |form| %>
+      <%= form.text_field :car_model, placeholder: "車種" %>
+      <%= form.text_field :image, placeholder: "Image Url" %>
+      <%= form.text_field :number, placeholder: "ナンバープレート" %>
+      <%= form.text_field :total_mileage, placeholder: "総走行距離" %>
+      <%= form.text_field :monthly_mileage, placeholder: "1ヶ月の走行距離" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>

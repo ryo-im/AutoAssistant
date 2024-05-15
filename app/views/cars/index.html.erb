@@ -1,0 +1,23 @@
+<div class="contents row">
+  <% @cars.each do |car| %>
+    <div class="content_post" style="background-image: url(<%= car.image %>);">
+      <div class="more">
+        <span><%= image_tag 'arrow_top.png' %></span>
+        <ul class="more_list">
+          <li>
+            <%= link_to 'メンテナンス', car_path(car.id) %>
+          </li>
+          <li>
+            <%= link_to '車両情報編集', edit_car_path(car.id) %>
+          </li>
+          <li>
+            <%= link_to '削除', car_path(car.id), data: { turbo_method: :delete } %>
+          </li>
+        </ul>
+      </div>
+      <span class="name">
+        <%= car.car_model %>
+      </span>
+    </div>
+  <% end %>
+</div>

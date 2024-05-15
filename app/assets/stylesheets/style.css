@@ -767,7 +767,7 @@ header.header div.header__bar.row div.grid-6 {
 }
 
 header.header div.header__bar.row div.grid-6 a.post {
-  width: 180px;
+  width: 1３0px;
   display: inline-left;
   margin-left: 10px;
 }
@@ -907,7 +907,7 @@ div.contents.row div.content_post .more:hover ul.more_list {
 div.contents.row div.content_post .more ul.more_list {
   position: absolute;
   text-align: left;
-  width: 80px;
+  width: 105px;
   right: 0;
   font-size: 12px;
   background-color: #fff;
@@ -1109,9 +1109,15 @@ footer p {
 }
 
 .cost_detail{
-  width: 150px;
-  font-size: 15px;
-  padding: 10px 35px;
+  width: 300px;
+  font-size: 20px;
+  padding: 15px;
   border: 1px solid #000;
   background-color: #d8d8d8;
+  text-align: center;
+}
+
+.calendar {
+  width: 800px;
+  margin: 30px auto 60px
 }
