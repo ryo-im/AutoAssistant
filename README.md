@@ -1,24 +1,54 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column              | Type    | Options     |
+| ------------------- | ------- | ----------- |
+| name                | string  | null: false |
+| email               | string  | null: false, unique: true |
+| encrypted_password  | string  | null: false |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :cars
 
-* Configuration
+## cars テーブル
 
-* Database creation
+| Column          | Type       | Options     |
+| --------------- | ---------- | ----------- |
+| car_model       | string     | null: false |
+| number          | text       | null: false |
+| total_mileage   | integer    | null: false |
+| monthly_mileage | integer    | null: false |
+| user            | references | null: false, foreign_key: true |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :maintenances
+- has_many :remainders
 
-* Services (job queues, cache servers, search engines, etc.)
+## maintenances テーブル
 
-* Deployment instructions
+| Column              | Type       | Options     |
+| ------------------- | ---------- | ----------- |
+| maintenance_type    | string     | null: false |
+| performed_at        | datetime   | null: false |
+| mileage             | integer    | null: false |
+| cost                | integer    | null: false |
+| car                 | references | null: false, foreign_key: true |
 
-* ...
+### Association
+
+- belongs_to :car
+
+## reminders テーブル
+
+| Column           | Type       | Options     |
+| ---------------- | ---------- | ----------- |
+| maintenance_type | string     | null: false |
+| next_due_at      | integer    | null: false |
+| car              | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :car
