@@ -1,4 +1,5 @@
 class CarsController < ApplicationController
+  before_action :set_car, only: [:edit, :show]
 
   def index
     @cars = Car.all
@@ -30,13 +31,17 @@ class CarsController < ApplicationController
   end
 
   def show
-    redirect_to maintenances_path
+    @car = Car.find(params[:id])
   end
 
   private
 
-    def car_params
-      params.require(:car).permit(:car_model, :number, :total_mileage, :monthly_mileage, :image)
-    end
+  def car_params
+    params.require(:car).permit(:car_model, :number, :total_mileage, :monthly_mileage, :image)
+  end
+
+  def set_car
+    @car = Car.find(params[:id])
+  end
 
 end

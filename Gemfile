@@ -76,3 +76,5 @@ gem 'pry-rails'
 gem 'devise'
 
 gem 'simple_calendar'
+
+gem 'whenever', require: false

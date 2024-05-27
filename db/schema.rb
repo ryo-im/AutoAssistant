@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_15_140936) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_27_062305) do
   create_table "cars", charset: "utf8", force: :cascade do |t|
     t.string "car_model"
     t.string "number"
@@ -19,6 +19,26 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_15_140936) do
     t.text "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "maintenances", charset: "utf8", force: :cascade do |t|
+    t.integer "maintenance_type_id", null: false
+    t.datetime "performed_at", null: false
+    t.integer "mileage", null: false
+    t.integer "cost", null: false
+    t.bigint "car_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["car_id"], name: "index_maintenances_on_car_id"
+  end
+
+  create_table "reminders", charset: "utf8", force: :cascade do |t|
+    t.integer "maintenance_type_id", null: false
+    t.datetime "next_due_at", null: false
+    t.bigint "car_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["car_id"], name: "index_reminders_on_car_id"
   end
 
   create_table "users", charset: "utf8", force: :cascade do |t|
@@ -34,4 +54,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_15_140936) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "maintenances", "cars"
+  add_foreign_key "reminders", "cars"
 end

@@ -1,0 +1,69 @@
+<h1 class="main_title"><%= @car.car_model %>のメンテナンス一覧</h1>
+<p class="distance">現在の走行距離: <%= @car.total_mileage %>km<p>
+
+<div class="item_list">
+  <div class="item_wrapper">
+    <div class ="item">
+      <div class="item_name">エンジンオイル</div>
+      <div class ="cycle">交換サイクル: 半年もしくは5,000km</div>
+    </div>
+    <div class="timing">次回交換時期:</div>
+  </div>
+
+  <div class="item_wrapper">
+    <div class="item">
+      <div class ="item_name">ワイパーゴム</div>
+      <div class ="cycle">交換サイクル: 1年</div>
+    </div>
+    <div class="timing">次回交換時期:</div>
+  </div>
+
+  <div class="item_wrapper">
+    <div class ="item">
+      <div class="item_name">バッテリー</div>
+      <div class="cycle">交換サイクル: 4年</div>
+    </div>
+    <div class="timing">次回交換時期:</div>
+  </div>
+
+  <div class="item_wrapper">
+    <div class ="item">
+      <div class="item_name">スパークプラグ</div>
+      <div class="cycle">交換サイクル: 50,000km</div>
+    </div>
+    <div class="timing">次回交換時期:</div>
+  </div>
+
+  <div class="item_wrapper">
+    <div class ="item">
+      <div class="item_name">エアコンフィルター</div>
+      <div class="cycle">交換サイクル: 1年</div>
+    </div>
+    <div class="timing">次回交換時期:</div>
+  </div>
+
+  <div class="item_wrapper">
+    <div class ="item">
+      <div class="item_name">CVTフルード</div>
+      <div class="cycle">交換サイクル: 50,000km</div>
+    </div>
+    <div class="timing">次回交換時期:</div>
+  </div>
+
+  <div class="item_wrapper">
+    <div class ="item">
+      <div class="item_name">タイヤ</div>
+      <div class="cycle">交換サイクル: 30,000km</div>
+    </div>
+    <div class="timing">次回交換時期:</div>
+  </div>
+</div>
+
+<div class="item_setting">
+  <%= link_to "setting" href="/maintenances">メンテナンスを記録する %>%
+</div>
+
+<div class="cost">
+  <div class="total_cost">メンテナンス費用の合計:〇〇円</div>
+  <a class="cost_detail" href="#">費用詳細</a>
+</div>

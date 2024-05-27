@@ -1069,7 +1069,7 @@ footer p {
   margin:0 auto;
 }
 
-.item {
+.item_list {
   width: 800px;
   margin:0 auto;
   padding: 10px;
@@ -1081,7 +1081,14 @@ footer p {
   padding: 10px;
 }
 
-.item_name {
+.item{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.item_name{
+  font-weight: bold;
 }
 
 .item_setting{
@@ -1119,5 +1126,5 @@ footer p {
 
 .calendar {
   width: 800px;
-  margin: 30px auto 60px
+  margin: 30px auto 60px;
 }
